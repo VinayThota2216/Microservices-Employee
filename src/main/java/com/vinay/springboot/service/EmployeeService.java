@@ -78,22 +78,14 @@ public class EmployeeService {
                 .toList();
     }
 
-//    // Delete Employee By ID
-//    public String deleteEmployeeById(Long id) {
-//
-//        Optional<Employee> employee = employeeRepository.findById(id);
-//
-//        if (employee.isPresent()) {
-//            employeeRepository.deleteById(id);
-//            return "Employee with " + id + " is deleted";
-//        }
-//
-//        return "Employee record not found to delete";
-//    }
-//
+    public String deleteEmployeeById(Long id) {
+        Optional<Employee> employee = employeeRepository.findById(id);
+        if (employee.isPresent()) {
+            employeeRepository.deleteById(id);
+            return "Employee with id " + id + " has been deleted";
+        }
+        return "Employee with id " + id + " has NOT been deleted";
 
-//
-//
-//
+    }
 
 }
